@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o seu Pais?</title>
+</head>
+<body>
+    <h1>De onde você veio?</h1>
+    Digite seu páis <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+        var txtpais = document.getElementById('txtpais').value;
+        
+        console.log(`Vivendo em ${txtpais}`);
+
+        if (txtpais.trim().toLowerCase() === 'brasil') {
+            console.log('Você é Brasileiro!');
+            document.getElementById('res').innerHTML = 'Você é Brasileiro!';
+        } else {
+            console.log('Você é Estrangeiro!');
+            document.getElementById('res').innerHTML = 'Você é Estrangeiro!';
+        }
+    }
+    </script>
+</body>
+</html>
